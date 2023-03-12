@@ -8,8 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-dotenv.config();
+const student = require("./routes/student.route.js");
+app.use("/student", student);
 
+dotenv.config();
 const port = process.env.PORT;
 const uri = process.env.MONGODB_URI;
 
@@ -27,4 +29,4 @@ const server = async () => {
 
 server();
 
-// 1:21
+//2 : 17
