@@ -20,16 +20,11 @@ router.get("/all", async (req, res) => {
     .catch((e) => console.log(`Error occured ${e}`));
 });
 
-router.put("update/:id", async (req, res) => {
+router.put("/update/:id", async (req, res) => {
   //Post also can be used here
-  const userId = req.params.id;
+  console.log(req.body);
   const { name, age, gender } = req.body;
-  const updateStudent = {
-    name,
-    age,
-    gender,
-  };
-  const update = await Student.findByIdAndUpdate(userId, updateStudent)
+  await Student.findByIdAndUpdate(req.params.id, { name, age, gender })
     .then(() => {
       res.status(200).send("User Updated");
     })
@@ -55,7 +50,7 @@ router.delete("/delete/:id", async (req, res) => {
 router.get("/get/:id", async (req, res) => {
   const userId = req.params.id;
   // findOne can be used if the promary key is not the ObjectId. For an example if email has been used, we have to use findOne(email)
-  const user = await Student.findById(userId)
+  await Student.findById(userId)
     .then((result) => {
       res.status(200).send(result);
     })
