@@ -15,8 +15,8 @@ dotenv.config();
 const port = process.env.PORT;
 const uri = process.env.MONGODB_URI;
 
-const server = async () => {
-  await mongoose
+const server = () => {
+  mongoose
     .connect(uri)
     .then(
       app.listen(port, () => {
@@ -28,5 +28,3 @@ const server = async () => {
 };
 
 server();
-
-//2 : 17
