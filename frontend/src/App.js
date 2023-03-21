@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/header";
 import AddStudent from "./components/addStudent";
+import AllStudents from "./components/allStudents";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/add" element={<AddStudent />} />
-          {/* <Route path="/" element={<AllStudents />} /> */}
+          <Route path="/" element={<AllStudents />} />
         </Routes>
       </div>
     </Router>

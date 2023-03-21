@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -19,12 +20,12 @@ function Header() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <a className="nav-item nav-link active" href="/">
-            Home <span className="sr-only">(current)</span>
-          </a>
-          <a className="nav-item nav-link" href="/add">
+          <Link className="nav-link" to="/">
+            Home
+          </Link>
+          <Link className="nav-link" to="/add">
             Create Student
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
