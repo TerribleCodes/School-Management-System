@@ -13,7 +13,7 @@ MongoDB, ExpressJS, ReactJS and NodeJS
 ## Clone the repository
 
 ```terminal
-$ git clone https://github.com/TerribleCodes/school_management_system.git
+$ git clone https://github.com/TerribleCodes/School-Management-System.git
 ```
 
 ## Project structure
